@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="worker" />
         <module name="data-provider" />
         <module name="api" />
       </profile>
@@ -19,6 +20,7 @@
       <module name="api" options="-parameters" />
       <module name="banking-system" options="-parameters" />
       <module name="data-provider" options="-parameters" />
+      <module name="worker" options="-parameters" />
     </option>
   </component>
 </project>
