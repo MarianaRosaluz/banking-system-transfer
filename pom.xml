@@ -20,6 +20,7 @@
         <module>api</module>
         <module>data-provider</module>
         <module>worker</module>
+        <module>business</module>
     </modules>
 
     <properties>
