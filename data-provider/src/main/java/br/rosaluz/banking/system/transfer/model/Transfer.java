@@ -22,27 +22,6 @@ public class Transfer {
     private long id;
     @NotNull
     private Long accountOrigin;
-
-    public long getId() {
-        return id;
-    }
-
-    public Long getAccountOrigin() {
-        return accountOrigin;
-    }
-
-    public Long getAccountDestination() {
-        return accountDestination;
-    }
-
-    public Double getValue() {
-        return value;
-    }
-
-    public String getType() {
-        return type;
-    }
-
     @NotNull
     private Long accountDestination;
     @NotNull
