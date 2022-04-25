@@ -21,12 +21,9 @@ public class Transfer {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private long id;
     @NotNull
-    private Long accountOrigin;
+    private String accountOrigin;
     @NotNull
-    private Long accountDestination;
+    private String accountDestination;
     @NotNull
     private Double value;
-    @NotNull
-    private String type;
-
 }

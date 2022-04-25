@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
-@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping(value = "/api/banking/system/transfer", produces="application/json")
 @Api(value="API REST Banking System")
@@ -26,7 +25,7 @@ public class TransferController {
     private final ConversionService conversionService;
 
 
-    @PostMapping("/transfer")
+    @PostMapping()
     public ResponseEntity<?> transfer(@RequestBody @Valid TransferDTO transferDTO )throws Exception {
         try {
 

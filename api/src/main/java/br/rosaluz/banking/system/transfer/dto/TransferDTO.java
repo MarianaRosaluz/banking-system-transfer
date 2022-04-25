@@ -12,9 +12,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class TransferDTO {
 
-    public Long accountOrigin;
-    public Long accountDestination;
-    public  double value;
-    public String type;
+    public String accountOrigin;
+    public String accountDestination;
+    public Double value;
 
 }

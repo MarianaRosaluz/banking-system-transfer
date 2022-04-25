@@ -8,9 +8,8 @@ import lombok.Data;
 public class TransferMessageDTO {
 
     private long id;
-    private Long accountOrigin;
-    private Long accountDestination;
+    private String accountOrigin;
+    private String accountDestination;
     private Double value;
-    private String type;
 
 }
