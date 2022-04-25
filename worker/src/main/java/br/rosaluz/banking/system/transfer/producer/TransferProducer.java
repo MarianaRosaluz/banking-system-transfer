@@ -1,6 +1,9 @@
 package br.rosaluz.banking.system.transfer.producer;
 
+import br.rosaluz.banking.system.transfer.model.Transfer;
 import br.rosaluz.banking.system.transfer.producer.dto.TransferMessageDTO;
+import br.rosaluz.banking.system.transfer.producer.dto.converter.TransferToTransferMessageDTO;
+import lombok.var;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -19,7 +22,8 @@ public class TransferProducer {
         this.kafkaTemplate = kafkaTemplate;
     }
 
-    public void send(TransferMessageDTO transferMessageDTO){
+    public void send(Transfer transfer){
+        var transferMessageDTO = TransferToTransferMessageDTO.convert(transfer);
         kafkaTemplate.send(topic, transferMessageDTO).addCallback(
                 success -> logger.info("Messagem send" + success.getProducerRecord().value()),
                 failure -> logger.info("Message failure" + failure.getMessage())
