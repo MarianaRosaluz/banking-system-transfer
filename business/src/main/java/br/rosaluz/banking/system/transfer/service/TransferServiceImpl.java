@@ -6,6 +6,8 @@ import br.rosaluz.banking.system.transfer.repository.TransferRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class TransferServiceImpl implements TransferService{
 
@@ -33,6 +35,9 @@ public class TransferServiceImpl implements TransferService{
         return  transferRepository.save(transfer);
     }
 
-
+    @Override
+    public Optional<Transfer> findById(long transferId){
+        return transferRepository.findById(transferId);
+    }
 
 }

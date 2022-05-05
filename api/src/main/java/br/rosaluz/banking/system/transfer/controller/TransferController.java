@@ -1,6 +1,7 @@
 package br.rosaluz.banking.system.transfer.controller;
 
 import br.rosaluz.banking.system.transfer.dto.TransferDTO;
+import br.rosaluz.banking.system.transfer.dto.TransferResponseDTO;
 import br.rosaluz.banking.system.transfer.model.Transfer;
 import br.rosaluz.banking.system.transfer.service.TransferService;
 import io.swagger.annotations.Api;
@@ -39,6 +40,13 @@ public class TransferController {
         }catch (Exception e){
             return ResponseEntity.badRequest().build();
         }
+
+    }
+    @GetMapping("status/{transferId}")
+    public ResponseEntity<?> statusTransfer(@PathVariable long transferId){
+
+        Transfer transfer = transferService.findById(transferId).get();
+        return ResponseEntity.ok(conversionService.convert(transfer, TransferResponseDTO.class));
 
     }
 }

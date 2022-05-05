@@ -38,7 +38,7 @@ __consumer_offsets 2 0
 __consumer_offsets 43 0
 __consumer_offsets 6 0
 __consumer_offsets 14 0
-banking.system.transfer 0 1
+banking.system.transfer 0 2
 __consumer_offsets 20 0
 __consumer_offsets 0 0
 __consumer_offsets 44 0
@@ -49,7 +49,7 @@ __consumer_offsets 1 0
 __consumer_offsets 5 0
 __consumer_offsets 26 0
 __consumer_offsets 29 0
-__consumer_offsets 34 8
+__consumer_offsets 34 12
 __consumer_offsets 10 0
 __consumer_offsets 32 0
 __consumer_offsets 40 0
