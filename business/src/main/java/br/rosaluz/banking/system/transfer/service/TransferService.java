@@ -7,7 +7,8 @@ import java.util.Optional;
 
 public interface TransferService {
 
-    public Transfer save(Transfer transfer);
-    public  boolean transfer(Transfer transferDTO);
-    public Optional<Transfer> findById(long transferId);
+    Transfer save(Transfer transfer);
+    void  transfer(Transfer transferDTO);
+     Optional<Transfer> findById(long transferId);
+     void makeTransfer(Transfer transfer);
 }
