@@ -21,6 +21,7 @@
         <module>data-provider</module>
         <module>worker</module>
         <module>business</module>
+        <module>thirdy-party</module>
     </modules>
 
     <properties>

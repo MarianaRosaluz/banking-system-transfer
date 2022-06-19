@@ -10,6 +10,7 @@ import br.rosaluz.banking.system.transfer.producer.TransferProducer;
 import br.rosaluz.banking.system.transfer.repository.TransferRepository;
 import lombok.var;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -35,7 +36,7 @@ public class TransferServiceImpl implements TransferService{
 
     @Override
     public void transfer(Transfer transfer){
-        makeTransfer(transfer);
+//        makeTransfer(transfer);
         transferProducer.send(transfer);
         save(transfer);
     }

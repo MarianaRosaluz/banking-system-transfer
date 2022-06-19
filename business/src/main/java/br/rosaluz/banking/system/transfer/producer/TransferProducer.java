@@ -11,7 +11,7 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
 @Service
-public class TransferProducer {
+public class TransferProducer{
 
     private static final Logger logger = LoggerFactory.getLogger(TransferProducer.class);
     private final String topic;
@@ -21,6 +21,7 @@ public class TransferProducer {
         this.topic = topic;
         this.kafkaTemplate = kafkaTemplate;
     }
+
 
     public void send(Transfer transfer){
         var transferMessageDTO = TransferToTransferMessageDTO.convert(transfer);
