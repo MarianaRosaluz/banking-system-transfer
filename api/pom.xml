@@ -11,7 +11,7 @@
 		</dependency>
 		<dependency>
 			<groupId>br.rosaluz.banking.system.transfer</groupId>
-			<artifactId>banking-system-transfer-business</artifactId>
+			<artifactId>banking-system-transfer-worker</artifactId>
 			<version>1.0-SNAPSHOT</version>
 			<scope>compile</scope>
 		</dependency>

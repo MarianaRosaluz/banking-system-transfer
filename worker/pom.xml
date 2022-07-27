@@ -10,19 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>banking-system-transfer-worker</artifactId>
-
-    <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
-    </properties>
-
     <dependencies>
-    <dependency>
-        <groupId>br.rosaluz.banking.system.transfer</groupId>
-        <artifactId>banking-system-transfer-data-provider</artifactId>
-        <version>1.0-SNAPSHOT</version>
-        <scope>compile</scope>
-    </dependency>
         <dependency>
             <groupId>br.rosaluz.banking.system.transfer</groupId>
             <artifactId>banking-system-transfer-business</artifactId>
@@ -30,5 +18,10 @@
             <scope>compile</scope>
         </dependency>
     </dependencies>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
 
 </project>

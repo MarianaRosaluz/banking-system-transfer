@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -14,11 +15,12 @@
         <module name="data-provider" />
         <module name="api" />
         <module name="worker" />
-        <module name="banking-system-transfer-worker" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="banking-system (1)" target="1.8" />
+      <module name="banking-system-transfer-thirdy-party" target="1.8" />
+      <module name="banking-system-transfer-worker" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -28,6 +30,7 @@
       <module name="banking-system-transfer-api" options="-parameters" />
       <module name="banking-system-transfer-business" options="-parameters" />
       <module name="banking-system-transfer-data-provider" options="-parameters" />
+      <module name="banking-system-transfer-thirdy-party" options="-parameters" />
       <module name="banking-system-transfer-worker" options="-parameters" />
       <module name="business" options="-parameters" />
       <module name="data-provider" options="-parameters" />
