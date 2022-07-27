@@ -35,6 +35,8 @@ hs_err_pid*
 # AWS User-specific
 .idea/**/aws.xml
 
+.DS_Store
+
 #kafka
 data/
 
