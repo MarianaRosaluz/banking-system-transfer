@@ -17,7 +17,7 @@ public class TransferProducer{
     private final String topic;
     private final KafkaTemplate<String, TransferMessageDTO> kafkaTemplate;
 
-    public TransferProducer(@Value("${topic.name}") String topic, KafkaTemplate<String, TransferMessageDTO> kafkaTemplate) {
+    public TransferProducer(@Value("${kafka.topics.transfer.topic.name}") String topic, KafkaTemplate<String, TransferMessageDTO> kafkaTemplate) {
         this.topic = topic;
         this.kafkaTemplate = kafkaTemplate;
     }

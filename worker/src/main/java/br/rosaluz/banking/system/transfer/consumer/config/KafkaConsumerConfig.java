@@ -1,4 +1,4 @@
-package br.rosaluz.banking.system.transfer.consumer;
+package br.rosaluz.banking.system.transfer.consumer.config;
 
 import br.rosaluz.banking.system.transfer.consumer.dto.TransferConsumerMessageDTO;
 import org.apache.kafka.clients.consumer.ConsumerConfig;

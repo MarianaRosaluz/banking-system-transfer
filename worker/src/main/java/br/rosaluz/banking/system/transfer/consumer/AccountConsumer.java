@@ -1,6 +1,6 @@
 package br.rosaluz.banking.system.transfer.consumer;
 
-import br.rosaluz.banking.system.transfer.consumer.dto.TransferConsumerMessageDTO;
+import br.rosaluz.banking.system.transfer.consumer.dto.AccountConsumerMessageDTO;
 import br.rosaluz.banking.system.transfer.service.TransferService;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.slf4j.Logger;
@@ -11,11 +11,10 @@ import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
 @Component
-public class TransferConsumer {
-
+public class AccountConsumer {
     private static final Logger log = LoggerFactory.getLogger(TransferConsumer.class);
 
-    @Value(value = "${kafka.topics.transfer.topic.name}")
+    @Value(value = "${kafka.topics.account.topic.name}")
     private String topic;
 
     @Value(value = "${spring.kafka.group-id}")
@@ -24,8 +23,8 @@ public class TransferConsumer {
     @Autowired
     private TransferService transferService;
 
-    @KafkaListener(topics = "${kafka.topics.transfer.topic.name}", groupId = "${spring.kafka.group-id}", containerFactory = "transferKafkaListenerContainerFactory")
-    public void listenTopicPayment(ConsumerRecord<String, TransferConsumerMessageDTO> record){
+    @KafkaListener(topics = "${kafka.topics.account.topic.name}", groupId = "${spring.kafka.group-id}", containerFactory = "transferKafkaListenerContainerFactory")
+    public void listenTopicPayment(ConsumerRecord<String, AccountConsumerMessageDTO> record){
         log.info("Received Message " + record.partition());
         log.info("Received Message " + record.value());
     }

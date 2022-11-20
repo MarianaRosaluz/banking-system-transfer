@@ -21,7 +21,7 @@ public class KafkaProducerConfig {
     @Value(value = "${spring.kafka.bootstrap-servers}")
     private String bootstrapAddress;
 
-    @Value(value = "${topic.name}")
+    @Value(value = "${kafka.topics.transfer.topic.name}")
     private String topic;
 
     @Bean
